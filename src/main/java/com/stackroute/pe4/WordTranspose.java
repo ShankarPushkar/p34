@@ -1,4 +1,4 @@
-package com.stackroute.pe3;
+package com.stackroute.pe4;
 
 public class WordTranspose {
     public String wordTransposer(String Input){
