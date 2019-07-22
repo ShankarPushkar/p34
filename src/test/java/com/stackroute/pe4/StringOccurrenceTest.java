@@ -23,7 +23,7 @@ public class StringOccurrenceTest {
         String input="She sells seashells by the seashore";
         String inputWord="se";
         String actualResult=stringOccurrence.stringOccurrenceFinder(input,inputWord);
-        String expectedResult="Found at: 4 - 6";
+        String expectedResult="Found:3 time";
         assertEquals(expectedResult,actualResult);
 
     }
@@ -41,7 +41,7 @@ public class StringOccurrenceTest {
         String input="She sells seashells by the seashore";
         String inputWord="zm";
         String actualResult=stringOccurrence.stringOccurrenceFinder(input,inputWord);
-        String expectedResult="Found at: Not Found";
+        String expectedResult="Found:0 time";
         assertEquals(expectedResult,actualResult);
 
     }
