@@ -21,16 +21,16 @@ public class WordSortingTest {
     @Test
     public void givenAStringShoulReturnWordsInOrder(){
         String input="Hello Hi There";
-        String[] actualResult=wordSorting.wordSorter(input);
-        String[] expectedResult={"Hello","Hi","There"};
-        assertArrayEquals(expectedResult,actualResult);
+        String actualResult=wordSorting.wordSorter(input);
+        String expectedResult="Hello Hi There";
+        assertEquals(expectedResult,actualResult);
     }
     @Test
     public void givenANullStringShouldReturnNull(){
         String input=null;
-        String[] actualResult=wordSorting.wordSorter(input);
-        String[] expectedResult=null;
-        assertArrayEquals(expectedResult,actualResult);
+        String actualResult=wordSorting.wordSorter(input);
+        String expectedResult=null;
+        assertEquals(expectedResult,actualResult);
 
 
     }
