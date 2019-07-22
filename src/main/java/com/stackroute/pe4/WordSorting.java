@@ -6,22 +6,24 @@ import java.util.List;
 
 public class WordSorting {
     public String wordSorter(String input) {
-        if(input!=null){
-        List<String> sorter = new ArrayList();
-        String[] inputArray = input.split(" ");
-        for (int i = 0; i < inputArray.length; i++) {
-            sorter.add(inputArray[i]);
-            //System.out.println(sorter);
+        if (input != null) {
+            List<String> sorter = new ArrayList();
+            String[] inputArray = input.split(" ");
+            for (int i = 0; i < inputArray.length; i++) {
+                sorter.add(inputArray[i]);
+                //System.out.println(sorter);
+            }
+            Collections.sort(sorter);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (String word : sorter) {
+                stringBuilder.append(word);
+                stringBuilder.append(" ");
+            }
+            return stringBuilder.toString().trim();
+        } else {
+
+            return null;
         }
-        Collections.sort(sorter);
-        StringBuilder sb = new StringBuilder();
-        for (String s : sorter) {
-            sb.append(s);
-            sb.append(" ");
-        }
-        return sb.toString().trim();
-        }else {
-        return null;}
     }
 
 }
