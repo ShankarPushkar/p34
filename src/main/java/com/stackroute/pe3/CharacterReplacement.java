@@ -2,6 +2,11 @@ package com.stackroute.pe3;
 
 public class CharacterReplacement {
     public String characterReplacer(String input){
-        return null;
+        String sendBack=null;
+        if(input!=null){
+        sendBack=input.replaceAll("d","f");
+        sendBack=sendBack.replaceAll("l","t");
+    }
+        return sendBack;
     }
 }
