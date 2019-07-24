@@ -43,7 +43,7 @@ public class CharacterReplacementTest {
 
     /*When we are giving an array, it should replace all the occurrence and
    return the replaced String.If there is no occurrence, it should return the
-   same
+   same array
    */
     @Test
     public void givenAStringShouldReturnSameString() {
