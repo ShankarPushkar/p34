@@ -11,29 +11,47 @@ public class CharacterOccurrenceTest {
 
     @Before
     public void setUp() {
-        characterOccurrence=new CharacterOccurrence();
+        //Arrange
+        characterOccurrence = new CharacterOccurrence();
     }
 
     @After
     public void tearDown() {
-        characterOccurrence=null;
+        characterOccurrence = null;
     }
-    @Test
-    public void givenAStringShouldReturnAOccurrence(){
-        String input="Hello This is pushkar here";
-        int actualResult=characterOccurrence.aCharacterCounter(input,"s");
-        assertEquals(3,actualResult);
-    }
-    @Test
-    public void givenAStringShouldReturnZero(){
-        String input="Hello There";
-        int actualResult=characterOccurrence.aCharacterCounter(input,"a");
-        assertEquals(0,actualResult);
 
+    /*When we are giving an array, it should return occurrence of
+    a given character
+    */
+    @Test
+    public void givenAStringShouldReturnAOccurrence() {
+        //Act
+        String input = "Hello This is pushkar here";
+        int actualResult = characterOccurrence.aCharacterCounter(input, "s");
+        //Assert
+        assertEquals(3, actualResult);
     }
+
+    /*When we are giving an array, it should return occurrence of
+    a given character,if it is not there it should return zero
+    */
+    @Test
+    public void givenAStringShouldReturnZero() {
+        //Act
+        String input = "Hello There";
+        int actualResult = characterOccurrence.aCharacterCounter(input, "a");
+        //Assert
+        assertEquals(0, actualResult);
+    }
+
+    /*
+    When we are giving a null array, it should throw null pointer exception
+    */
     @Test(expected = NullPointerException.class)
-    public void givenANullStringShouldNullPointerException(){
-        int actualResult=characterOccurrence.aCharacterCounter(null,"z");
-        assertEquals(0,actualResult);
+    public void givenANullStringShouldNullPointerException() {
+        //Act
+        int actualResult = characterOccurrence.aCharacterCounter(null, "z");
+        //Assert
+        assertEquals(0, actualResult);
     }
 }
