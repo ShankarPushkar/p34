@@ -13,7 +13,6 @@ public class WordTranspose {
                 temporary.append(getWords[i]);
                 temporary.reverse();
                 getWords[i] = temporary.toString();
-//            System.out.println(getWords[i]);
             }
             for (int i = 0; i < getWords.length; i++) {
                 sendBack = sendBack.concat(getWords[i] + " ");
@@ -24,6 +23,5 @@ public class WordTranspose {
             return null;
         }
 
-//        return Arrays.toString(getWords);
     }
 }

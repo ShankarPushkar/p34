@@ -11,7 +11,6 @@ public class WordSorting {
             String[] inputArray = input.split(" ");
             for (int i = 0; i < inputArray.length; i++) {
                 sorter.add(inputArray[i]);
-                //System.out.println(sorter);
             }
             Collections.sort(sorter);
             StringBuilder stringBuilder = new StringBuilder();
