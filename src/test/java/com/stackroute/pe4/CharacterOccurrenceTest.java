@@ -31,10 +31,9 @@ public class CharacterOccurrenceTest {
         assertEquals(0,actualResult);
 
     }
-    @Test
-    public void givenANullStringShouldReturnZero(){
-        String input=null;
-        int actualResult=characterOccurrence.aCharacterCounter(input,"z");
+    @Test(expected = NullPointerException.class)
+    public void givenANullStringShouldNullPointerException(){
+        int actualResult=characterOccurrence.aCharacterCounter(null,"z");
         assertEquals(0,actualResult);
     }
 }
